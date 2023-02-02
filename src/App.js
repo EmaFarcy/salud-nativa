@@ -1,10 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
+import "bootstrap/dist/css/bootstrap.min.css";
+
+const objStyle = {color: 'white', backgroundColor: 'black', fontSize: 15};
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={objStyle}>
       <NavBar />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

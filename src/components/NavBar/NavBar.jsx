@@ -1,40 +1,42 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import React from "react";
+import CartWidget from "../cartWidget/cartWidget";
+import LogoAves from "../../assets/images/logoAves.png";
+import './NavBar.css';
 
-function CollapsibleExample() {
-  return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-          <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  );
+const styles= {
+	logo_aves:{
+		width: "70px",
+		height: "80px"
+	}
+} 
+
+const NavBar= () => {
+    return (
+		<>
+        	<div className="container-fluid home_container">
+		    	<header>
+			    	<div id="menu">
+				    	<nav className="nav1">
+							<img src={LogoAves} alt="LogoAero" style={styles.logo_aves}></img>
+                            <h1>Salud Nativa</h1>
+					    	<ul>
+							<li><a href="/">Home</a></li>
+					    	<li><a href="/">Arbustos</a></li>
+							<li><a href="/">Árboles</a></li>
+                            <li><a href="/">Semillas</a></li>
+					    	<li><a href="/">Sobre Nosotros</a></li>
+							<li><a href="/">Contacto</a></li>
+                            <li><a href="/"><CartWidget /></a></li>
+				    		</ul>
+				    	</nav>
+				    	<div className="fake-line"></div>
+						
+			    	</div>
+            	</header>
+        	</div>
+		</>
+            
+    );
 }
 
-export default CollapsibleExample;
+export default NavBar;
