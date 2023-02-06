@@ -26,7 +26,7 @@ const NavBar= () => {
                             <li><a href="/">Semillas</a></li>
 					    	<li><a href="/">Sobre Nosotros</a></li>
 							<li><a href="/">Contacto</a></li>
-                            <li><a href="/"><CartWidget /></a></li>
+                            <li><a href="/"><CartWidget />1</a></li>
 				    		</ul>
 				    	</nav>
 				    	<div className="fake-line"></div>
